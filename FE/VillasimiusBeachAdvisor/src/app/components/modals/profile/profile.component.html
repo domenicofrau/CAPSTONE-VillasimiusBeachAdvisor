@@ -1,0 +1,30 @@
+
+<div id="profile_modal" class="modal fade" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <div id="profile_dialog" class="modal-content">
+        <div class="modal-header">
+          <h1 id="profile_label" class="modal-title text-dark mx-auto">Profilo</h1>
+          <button id="close_modal_profile" data-bs-dismiss="modal" type="button">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <form #f="ngForm">
+          <div class="container px-4">
+            <div class="mb-3 mt-4">
+              <label>ID:</label> {{ user?.id }}
+            </div>
+            <div class="mb-3">
+              <label>Username:</label> {{ user?.username }}
+            </div>
+            <div class="mb-3">
+              <label>Email:</label> {{ user?.email }}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.modal-content {
+  width: inherit;
+  max-width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+#login_btn {
+  background-color: rgb(255, 255, 255);
+  border-style: none;
+  color: rgb(42, 76, 110);
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+#login_dialog,
+#profile_dialog,
+#favourites_dialog,
+#logout_dialog {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.login_label,
+.favourites_label,
+.logout_label,
+.checkEsci {
+  font-size: 30px;
+}
+
+#accedi_btn,
+#registrati_btn {
+  background-color: rgb(42, 76, 110);
+  border-style: none;
+}
+
+#close_modal_login,
+#back_to_login,
+#close_modal_signup,
+#close_modal_favourites,
+#close_modal_profile {
+  background-color: transparent;
+  border-style: none;
+  color: rgb(104, 104, 104);
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+#signup_btn {
+  background-color: transparent;
+  border-style: none;
+  color: rgb(42, 76, 110);
+  font-size: 14px;
+  text-decoration: inherit;
+  padding-left: 3px;
+}
+
+.signup_label {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.username_error_label,
+.password_error_label,
+.name_error_label,
+.surname_error_label {
+  color: rgb(237, 97, 62);
+  font-size: 14px;
+}
+
+input {
+  color: rgb(44, 44, 44);
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: rgba(42, 76, 110, 0.45);
+  font-size: 12px;
+}
+input::placeholder {
+  color: rgba(42, 76, 110, 0.45);
+  font-size: 12px;
+}
+
+.custom-navbar {
+  background-color: rgb(42, 76, 110);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: rgb(255, 255, 255);
+}
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .nav-link:hover {
+  cursor: pointer;
+}
+.custom-navbar .social-icons {
+  padding-top: 2px;
+  font-size: 15px;
+}
+.custom-navbar .heart-icon {
+  font-size: 17px;
+  padding-top: 1px;
+}
+.custom-navbar .user-icon {
+  font-size: 22px;
+}
+.custom-navbar .quit-icon {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.379);
+}
+.custom-navbar .quit-icon:hover {
+  color: white;
+}
+
+#login_btn {
+  background-color: rgb(255, 255, 255);
+  border-style: none;
+  color: rgb(42, 76, 110);
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+.welcomeText {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+
+.heart-icon {
+  padding-top: 1px;
+}
+
+@media screen and (max-width: 320px) {
+  li.nav-item .user-icon,
+  li.nav-item .heart-icon {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 325px) {
+  span:last-child {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.component.css.map */

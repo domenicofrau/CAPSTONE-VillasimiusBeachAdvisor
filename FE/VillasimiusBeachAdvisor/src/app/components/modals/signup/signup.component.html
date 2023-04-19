@@ -1,0 +1,55 @@
+<div id="signup_modal" class="modal fade" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <div id="login_dialog" class="modal-content">
+        <div class="modal-header">
+          <button id="back_to_login" data-bs-dismiss="modal" type="button" ><i data-bs-toggle="modal" data-bs-target="#login_modal"
+              class="bi bi-arrow-left-short"></i></button>
+          <h1 id="login_label" class="modal-title text-dark mx-auto">SignUp</h1>
+          <button id="close_modal_signup" type="button" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+        </div>
+        <form #f="ngForm" (ngSubmit)=onSubmit(f)>
+          <div class="container px-4">
+            <div class="mt-3 mb-3">
+              <input id="signupUsernameInput" [(ngModel)]="username" name="username" type="text" placeholder="username"
+                class="form-control" required="true">
+              <p class="username_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+            </div>
+            <div class="mb-3 row">
+              <div class="col">
+                <input id="loginNameInput" [(ngModel)]="name" name="name" type="text" placeholder="nome"
+                  class="form-control" required="true">
+                <p class="name_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+              </div>
+              <div class="col">
+                <input id="loginSurnameInput" [(ngModel)]="surname" name="surname" type="text" placeholder="cognome"
+                  class="form-control" required="true">
+                <p class="surname_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+              </div>
+            </div>
+            <div class="mb-4">
+              <input id="signupEmailInput" [(ngModel)]="email" name="email" type="email" placeholder="email"
+                class="form-control" required="true">
+              <p class="email_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+            </div>
+
+            <div class="mb-2">
+              <input id="signupPasswordInput" [(ngModel)]="password" name="password" type="password"
+                placeholder="crea password" class="form-control" required="true">
+              <p class="password_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+            </div>
+            <div class="mb-3">
+              <input id="signupPasswordVerInput" [(ngModel)]="verifica" name="verificaPassword" type="password" placeholder="verifica password"
+                class="form-control" required>
+              <p class="password_error_label mt-2 ps-1" *ngIf=!isLogged>Campo obbligatorio.</p>
+              <p class="password_error_label mt-2 ps-1" *ngIf=!passwordOk>Le password non corrispondonono</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="registrati_btn" type="submit" data-bs-toggle="modal" data-bs-target="#login_modal" class="btn btn-primary me-3" [disabled]="!f.valid"><span data-bs-dismiss="modal">Registrati</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

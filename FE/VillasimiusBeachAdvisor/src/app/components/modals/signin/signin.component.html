@@ -1,0 +1,39 @@
+<div id="login_modal" class="modal fade" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <div id="login_dialog" class="modal-content">
+        <div class="modal-header">
+          <h1 id="login_label" class="modal-title text-dark mx-auto">Login</h1>
+          <button id="close_modal_login" type="button" data-bs-dismiss="modal">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <form #f="ngForm" (ngSubmit)=onSubmit(f)>
+          <div class="container px-4">
+            <div class="mb-3 mt-4">
+              <input id="loginUsernameInput" [(ngModel)]="username" name="username" type="text" placeholder="username"
+                class="form-control" required="true" autofocus>
+              <p class="username_error_label mt-2 ps-1" *ngIf=!isLogged>Username non valido. Per favore, inserire un
+                username corretto.</p>
+            </div>
+            <div class="mb-3">
+              <input id="loginPasswordInput" [(ngModel)]="password" name="password" type="password"
+                placeholder="password" class="form-control" required="true">
+              <div class="d-flex align-items-center">
+                <p class="password_error_label mt-2 ps-1" *ngIf=!isLogged>Password non valida.</p>
+                <div>
+                  <label class="signup_label mt-4 ps-1">Non sei registrato? <button id="signup_btn" type="button"
+                      class="btn btn-link pt-1" data-bs-dismiss="modal"><span data-bs-toggle="modal" data-bs-target="#signup_modal">Registrati
+                        qui!</span></button></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="accedi_btn" type="submit" class="btn btn-primary me-3" data-bs-dismiss="modal" [disabled]="!f.valid">Accedi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

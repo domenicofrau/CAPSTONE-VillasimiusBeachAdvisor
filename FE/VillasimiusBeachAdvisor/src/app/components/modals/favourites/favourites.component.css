@@ -1,0 +1,139 @@
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.modal-content {
+  width: inherit;
+  max-width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+#login_btn {
+  background-color: rgb(255, 255, 255);
+  border-style: none;
+  color: rgb(42, 76, 110);
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+#login_dialog,
+#profile_dialog,
+#favourites_dialog,
+#logout_dialog {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.login_label,
+.favourites_label,
+.logout_label,
+.checkEsci {
+  font-size: 30px;
+}
+
+#accedi_btn,
+#registrati_btn {
+  background-color: rgb(42, 76, 110);
+  border-style: none;
+}
+
+#close_modal_login,
+#back_to_login,
+#close_modal_signup,
+#close_modal_favourites,
+#close_modal_profile {
+  background-color: transparent;
+  border-style: none;
+  color: rgb(104, 104, 104);
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+#signup_btn {
+  background-color: transparent;
+  border-style: none;
+  color: rgb(42, 76, 110);
+  font-size: 14px;
+  text-decoration: inherit;
+  padding-left: 3px;
+}
+
+.signup_label {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.username_error_label,
+.password_error_label,
+.name_error_label,
+.surname_error_label {
+  color: rgb(237, 97, 62);
+  font-size: 14px;
+}
+
+input {
+  color: rgb(44, 44, 44);
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: rgba(42, 76, 110, 0.45);
+  font-size: 12px;
+}
+input::placeholder {
+  color: rgba(42, 76, 110, 0.45);
+  font-size: 12px;
+}
+
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.modal-content {
+  min-width: 30%;
+  max-width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+.img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn_likeSI,
+.btn_likeNO {
+  color: rgb(198, 88, 84);
+  outline: none !important;
+  border: none;
+  z-index: 3;
+}
+.btn_likeSI:hover,
+.btn_likeNO:hover {
+  filter: brightness(1.2);
+}/*# sourceMappingURL=favourites.component.css.map */

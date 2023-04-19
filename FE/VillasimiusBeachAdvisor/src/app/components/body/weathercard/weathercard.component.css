@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@keyframes tramontana-oscillation {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes grecale-oscillation {
+  0% {
+    transform: rotate(43deg);
+  }
+  50% {
+    transform: rotate(47deg);
+  }
+  100% {
+    transform: rotate(43deg);
+  }
+}
+@keyframes levante-oscillation {
+  0% {
+    transform: rotate(88deg);
+  }
+  50% {
+    transform: rotate(92deg);
+  }
+  100% {
+    transform: rotate(88deg);
+  }
+}
+@keyframes scirocco-oscillation {
+  0% {
+    transform: rotate(133deg);
+  }
+  50% {
+    transform: rotate(137deg);
+  }
+  100% {
+    transform: rotate(133deg);
+  }
+}
+@keyframes ostro-oscillation {
+  0% {
+    transform: rotate(178deg);
+  }
+  50% {
+    transform: rotate(182deg);
+  }
+  100% {
+    transform: rotate(178deg);
+  }
+}
+@keyframes libeccio-oscillation {
+  0% {
+    transform: rotate(223deg);
+  }
+  50% {
+    transform: rotate(227deg);
+  }
+  100% {
+    transform: rotate(223deg);
+  }
+}
+@keyframes ponente-oscillation {
+  0% {
+    transform: rotate(268deg);
+  }
+  50% {
+    transform: rotate(272deg);
+  }
+  100% {
+    transform: rotate(268deg);
+  }
+}
+@keyframes maestrale-oscillation {
+  0% {
+    transform: rotate(313deg);
+  }
+  50% {
+    transform: rotate(317deg);
+  }
+  100% {
+    transform: rotate(313deg);
+  }
+}
+#TRAMONTANA {
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+  animation: tramontana-oscillation 0.5s linear infinite;
+}
+
+#GRECALE {
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+  animation: grecale-oscillation 0.5s linear infinite;
+}
+
+#LEVANTE {
+  transform: rotate(90deg);
+  transition: all 0.5s ease-in-out;
+  animation: levante-oscillation 0.5s linear infinite;
+}
+
+#SCIROCCO {
+  transform: rotate(135deg);
+  transition: all 0.5s ease-in-out;
+  animation: scirocco-oscillation 0.5s linear infinite;
+}
+
+#OSTRO {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+  animation: ostro-oscillation 0.5s linear infinite;
+}
+
+#LIBECCIO {
+  transform: rotate(225deg);
+  transition: all 0.5s ease-in-out;
+  animation: libeccio-oscillation 0.5s linear infinite;
+}
+
+#PONENTE {
+  transform: rotate(270deg);
+  transition: all 0.5s ease-in-out;
+  animation: ponente-oscillation 0.5s linear infinite;
+}
+
+#MAESTRALE {
+  transform: rotate(315deg);
+  transition: all 0.5s ease-in-out;
+  animation: maestrale-oscillation 0.5s linear infinite;
+}
+
+.weatherCard {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  min-width: 300px;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(21, 47, 74);
+}
+
+.arrow-container {
+  width: 50px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+.arrow-container img {
+  width: 100%;
+}/*# sourceMappingURL=weathercard.component.css.map */

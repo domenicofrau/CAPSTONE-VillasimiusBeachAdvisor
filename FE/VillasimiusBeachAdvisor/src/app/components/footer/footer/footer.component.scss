@@ -1,0 +1,13 @@
+@import "../../../colors";
+@import "../../../font";
+
+#footer
+{
+  position:static;
+  bottom:0px;
+}
+
+.mailTo{
+  text-decoration: none;
+  color: $bianco
+}

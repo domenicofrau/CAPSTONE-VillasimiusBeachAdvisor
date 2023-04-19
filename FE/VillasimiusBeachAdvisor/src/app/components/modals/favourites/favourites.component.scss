@@ -1,0 +1,37 @@
+@import "../../../colors";
+@import "../../../modals";
+
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none;
+}
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+.modal-content {
+  min-width:30%;
+  max-width:inherit;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+.img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.btn_likeSI,
+.btn_likeNO {
+  color: $like;
+  outline: none !important;
+  border: none;
+  z-index: 3;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}

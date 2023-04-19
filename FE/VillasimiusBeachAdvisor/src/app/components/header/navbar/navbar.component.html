@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <div class="row w-100">
+      <div class="col-6 col-md-4 d-flex align-items-center justify-content-start">
+        <a class="navbar-brand d-flex align-items-center ms-1 ms-md-4" href="#">
+          <img class="me-2" src="../../../assets/img/logo.png" alt="Villasimius Beach Advisor Logo" width="30"
+            height="24">
+          <span class="d-none d-sm-inline">Villasimius</span>&nbsp;<span>Beach Advisor</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-8 d-flex justify-content-end align-items-center">
+        <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex flex-wrap ms-auto mb-lg-0 align-items-center">
+            <li class="nav-item social-icons d-none d-lg-inline-block align-items-center">
+              <a class="nav-link me-2" href="https://twitter.com/i/flow/signup" target="_blank"><i
+                  class="bi bi-twitter"></i></a>
+            </li>
+            <li class="nav-item social-icons d-none d-lg-inline-block align-items-center">
+              <a class="nav-link me-2" href="https://it-it.facebook.com/reg/" target="_blank"><i
+                  class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item social-icons d-none d-lg-inline-block align-items-center">
+              <a class="nav-link me-5" href="https://www.instagram.com/accounts/emailsignup/" target="_blank"><i
+                  class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item heart-icon d-flex align-items-center" *ngIf="isAuthenticated">
+              <span class="welcomeText d-none d-md-inline">Welcome, {{authService.currentUserValue?.username}}</span>
+              <a class="nav-link me-3 user-icon" data-bs-toggle="modal" data-bs-target="#profile_modal" href=""><i
+                  class="bi bi-person-fill"></i></a>
+              <app-profile></app-profile>
+              <a class="nav-link pt-2 me-4 heart-icon" data-bs-toggle="modal" data-bs-target="#favourites_modal" href="">
+                <i class="bi bi-heart-fill" (click)="ottieniPreferiti()"></i>
+              </a>
+              <app-favourites></app-favourites>
+              <a class="nav-link quit-icon" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <i class="bi bi-box-arrow-right"></i>
+              </a>
+            </li>
+            <li *ngIf="!isAuthenticated" class="nav-item d-flex align-items-center">
+              <button id="login_btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#login_modal">Login</button>
+              <app-signin></app-signin>
+            </li>
+            <app-signup></app-signup>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <div id="logout_dialog"class="modal-content">
+        <div class="modal-header">
+          <h5 id="logout_label" class="modal-title" id="logoutModalLabel">Conferma logout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          Sei sicuro di voler effettuare il logout?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+          <button type="button" class="btn btn-danger" (click)="logout()" data-bs-dismiss="modal">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

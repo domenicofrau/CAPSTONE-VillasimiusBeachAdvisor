@@ -1,0 +1,91 @@
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none;
+}
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+.modal-content {
+  width:inherit;
+  max-width:inherit;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+#login_btn{
+  background-color: $bianco;
+  border-style: none;
+  color:$main-color;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+#login_dialog,
+#profile_dialog,
+#favourites_dialog,
+#logout_dialog{
+  background-color: rgb(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.login_label,
+.favourites_label,
+.logout_label,
+.checkEsci{
+  font-size: 30px;
+}
+
+#accedi_btn,
+#registrati_btn{
+  background-color: $main-color;
+  border-style: none;
+}
+
+#close_modal_login,
+#back_to_login,
+#close_modal_signup,
+#close_modal_favourites,
+#close_modal_profile{
+  background-color: transparent;
+  border-style: none;
+  color:$grigio-chiudi;
+  margin-top:15px;
+  font-size: 20px;
+}
+
+#signup_btn{
+  background-color: transparent;
+  border-style: none;
+  color: $main-color;
+  font-size: 14px;
+  text-decoration: inherit;
+  padding-left: 3px;
+}
+
+.signup_label{
+  color: $nero;
+  font-size: 14px;
+}
+
+.username_error_label,
+.password_error_label,
+.name_error_label,
+.surname_error_label{
+  color:$rosso-errore;
+  font-size: 14px;
+}
+
+input{
+  color: rgb(44, 44, 44);
+  font-size: 14px;
+  &::placeholder {
+    color: rgba(42, 76, 110, 0.45);
+    font-size: 12px;
+  }
+}

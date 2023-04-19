@@ -1,0 +1,30 @@
+<div id="favourites_modal" class="modal fade" tabindex="-1" aria-labelledby="favouritesLabel" aria-hidden="true"
+  (hidden.bs.modal)="modalHidden()" (shown.bs.modal)="ottieniPreferiti()">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <div id="favourites_dialog" class="modal-content">
+        <div class="modal-header">
+          <h1 id="favourites_label" class="modal-title text-dark mx-auto">I tuoi Preferiti</h1>
+          <button id="close_modal_favourites" data-bs-dismiss="modal" type="button">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <div class="modal-body w-100 ">
+          <ul class="list-group">
+            <div *ngIf="favourites.length === 0" class="text-center">
+              <p>Non sono presenti preferiti</p>
+            </div>
+            <li *ngFor="let fav of favourites" class="list-group-item d-flex align-items-center">
+              <img class="img me-3" src="{{fav.imageUrl}}">
+              <span class="me-auto">{{ fav.nome }}</span>
+              <button *ngIf="gestioneIcone(fav.id)==true" (click)="rimuoviPreferiti(fav.id)" type="button"
+                class="btn btn_likeSI btn btn-light-blue btn-md ml-auto"><i class="bi bi-heart-fill"></i></button>
+              <button *ngIf="gestioneIcone(fav.id)==false" (click)="aggiungiPreferiti(fav.id)" type="button"
+                class="btn btn_likeNO btn-light-blue btn-md ml-auto"><i class="bi bi-heart"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

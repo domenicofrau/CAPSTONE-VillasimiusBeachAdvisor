@@ -1,0 +1,139 @@
+@import "../../../colors";
+@import "../../../font";
+
+.card {
+  margin: 5% 0%;
+  border-radius: 20px;
+  &:hover {
+    cursor: default;
+  }
+  .card-img-top {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .card-text {
+    min-height: 120px;
+    color: $grigio-chiudi;
+  }
+}
+.custom-card-img {
+  margin-top: 15%;
+  height: 200px;
+  object-fit: cover;
+}
+.label-top-left,
+.label-top-left-plus {
+  position: absolute;
+  top: 12px;
+  z-index: 1;
+  color: $grigio-chiudi;
+}
+.label-top-left {
+  left: 17%;
+}
+.label-top-left-plus {
+  left: 15%;
+}
+.icon-top-right-ottimo,
+.icon-top-right-buono,
+.icon-top-right-medio,
+.icon-top-right-pessimo {
+  position: absolute;
+  top: 6px;
+  left: 5%;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+.icon-top-right-ottimo {
+  color: $vento-ottimo;
+}
+
+.icon-top-right-buono {
+  color: $vento-buono;
+}
+.icon-top-right-medio {
+  color: $vento-medio;
+}
+.icon-top-right-pessimo {
+  color: $vento-pessimo;
+}
+.btn_likeSI,
+.btn_likeNO {
+  font-size: 30px;
+  color: $like;
+  outline: none !important;
+  border: none;
+  z-index: 3;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+.info-icon {
+  outline: none !important;
+  border: none;
+  &:hover {
+    filter: invert(0.8);
+  }
+}
+.descrizione {
+  text-align: justify;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal-content {
+  max-width: 70%;
+  max-height: 70%;
+  overflow: auto;
+}
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.custom-card-img-plus {
+  margin-top: 60px;
+  height: 400px;
+  object-fit: cover;
+}
+.modal-card-content {
+  overflow-y: hidden;
+}
+@media (max-width: 767px) {
+  .info-icon {
+    display: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.map-container {
+  position: relative;
+  width: 10%;
+}
+#map {
+  width: 10%;
+  height: 10%;
+  box-shadow: 0px 10px 20px rgb(156, 156, 156);
+}
+.small-map {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}

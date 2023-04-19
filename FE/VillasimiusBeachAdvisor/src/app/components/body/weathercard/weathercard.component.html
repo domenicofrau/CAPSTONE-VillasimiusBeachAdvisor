@@ -1,0 +1,15 @@
+<div class="weatherCard card-content">
+  <div class="text-container">
+    <h1 class="card-title ms-3 mb-3 mt-4">{{windDirection}}</h1>
+    <p class="ms-3">
+      <i class="bi bi-wind me-2"></i>
+      Velocità:
+      <b>{{windSpeed}} km/h</b>
+    </p>
+    <p class="ms-3"><i class="bi bi-thermometer-half me-2"></i>Temperatura: <b>{{temperature}} °C</b></p>
+    <p class="ms-3"><i class="bi bi-droplet me-2"></i>Umidità: <b>{{humidity}}%</b></p>
+  </div>
+  <div class="arrow-container d-flex align-items-end justify-content-end">
+    <img id={{windDirection}} src="../../../assets/img/freccia.png">
+  </div>
+</div>
