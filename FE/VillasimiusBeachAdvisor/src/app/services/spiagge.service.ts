@@ -40,7 +40,8 @@ export class SpiaggeService {
         }
       }
 
-      return spiagge;
+      const sortedSpiagge = this.sortSpiagge(spiagge);
+      return sortedSpiagge;
     } catch (error) {
       console.error('Errore nel recupero delle spiagge:', error);
       return [];
@@ -53,8 +54,8 @@ export class SpiaggeService {
 
     if (isOttima) {
       return "Ottimo, consigliato";
-    // } else if (isPessima) {
-    //   return "Al momento, sconsigliato";
+      // } else if (isPessima) {
+      //   return "Al momento, sconsigliato";
     } else {
       if (windSpeed > 8) {
         return "Al momento, sconsigliato";
@@ -65,4 +66,51 @@ export class SpiaggeService {
       }
     }
   }
+
+  private sortSpiagge(spiagge: Spiaggia[]): Spiaggia[] {
+    const order = [
+      "Ottimo, consigliato",
+      "Condizioni buone",
+      "Vento non fastidioso",
+      "Al momento, sconsigliato"
+    ];
+
+    const groupedSpiagge = this.groupSpiaggeByCondition(spiagge);
+
+    for (const key in groupedSpiagge) {
+      groupedSpiagge[key] = this.shuffleArray(groupedSpiagge[key]);
+    }
+
+    const sortedSpiagge: Spiaggia[] = [];
+
+    for (const condition of order) {
+      if (groupedSpiagge[condition]) {
+        sortedSpiagge.push(...groupedSpiagge[condition]);
+      }
+    }
+
+    return sortedSpiagge;
+  }
+
+  private groupSpiaggeByCondition(spiagge: Spiaggia[]): { [key: string]: Spiaggia[] } {
+    const groupedSpiagge: { [key: string]: Spiaggia[] } = {};
+
+    for (const spiaggia of spiagge) {
+      if (!groupedSpiagge[spiaggia.condizione]) {
+        groupedSpiagge[spiaggia.condizione] = [];
+      }
+      groupedSpiagge[spiaggia.condizione].push(spiaggia);
+    }
+
+    return groupedSpiagge;
+  }
+
+  private shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
 }
