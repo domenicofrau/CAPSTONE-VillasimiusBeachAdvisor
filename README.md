@@ -1,4 +1,4 @@
-Progetto: Web App di Consigli Meteo per le Spiagge di Villasimius
+#Progetto: Web App di Consigli Meteo per le Spiagge di Villasimius
 Descrizione
 La Web App che stai sviluppando si occupa di recuperare dati meteo in tempo reale e, in base a questi dati, consigliare le migliori spiagge di Villasimius in cui andare. L'obiettivo è aiutare gli utenti a trovare la spiaggia più adatta alle loro esigenze, in modo da garantire loro una giornata al mare sicura e piacevole.
 
