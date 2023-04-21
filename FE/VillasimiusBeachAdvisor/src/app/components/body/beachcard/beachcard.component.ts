@@ -4,10 +4,6 @@ import { AuthService } from 'src/app/services/auth.service';
 import { PreferitiService } from 'src/app/services/preferiti.service';
 import { switchMap } from 'rxjs/operators';
 import { UpdateCardService } from 'src/app/services/update-card.service';
-import { Spiaggia } from '../../../interfaces/spiaggia.interface';
-
-
-
 @Component({
   selector: 'app-beachcard',
   templateUrl: './beachcard.component.html',

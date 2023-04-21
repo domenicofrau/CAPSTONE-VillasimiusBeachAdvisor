@@ -23,9 +23,6 @@
           <p class="card-text text-justify mt-4 descrizione" *ngIf="screenWidth <= 767">
             {{ spiaggia.descrizione }}
           </p>
-
-
-
           <div class="d-flex justify-content-end">
             <button (click)="onInfoClick(spiaggia)" type="button" class="info-icon btn btn-light-blue btn-md">
               <i class="bi bi-info-circle"></i>
@@ -65,13 +62,34 @@
           {{ selectedSpiaggia.descrizione }}
         </p>
       </div>
+
+      <div class="card-map">
+        <app-beach-map [lat]="selectedSpiaggia.latitudine" [lng]="selectedSpiaggia.longitudine"></app-beach-map>
+      </div>
+
+      <div class="details-bg mt-3 pt-2 pb-2">
+        <p class="mb-1 ms-4 details">
+          Presenza di stabilimento balneare:
+          <strong [ngClass]="selectedSpiaggia.stabilimentoBalneare ? 'text-green' : 'text-red'">{{ selectedSpiaggia.stabilimentoBalneare ? 'Sì' : 'No' }}</strong>
+        </p>
+        <p class="mb-1 ms-4 details">
+          Presenza di bar:
+          <strong [ngClass]="selectedSpiaggia.bar ? 'text-green' : 'text-red'">{{ selectedSpiaggia.bar ? 'Sì' : 'No' }}</strong>
+        </p>
+        <p class="mb-1 ms-4 details">
+          Ingresso cani consentito:
+          <strong [ngClass]="selectedSpiaggia.ingressoCani ? 'text-green' : 'text-red'">{{ selectedSpiaggia.ingressoCani ? 'Sì' : 'No' }}</strong>
+        </p>
+      </div>
+
       <button (click)="onCloseClick()" type="button" class="btn btn-close">
       </button>
       <div *ngIf="authService.isAuthenticated()" class="d-flex justify-content-end">
-        <button *ngIf="gestioneIcone(selectedSpiaggia.id)==true" (click)="rimuoviPreferiti(selectedSpiaggia.id)" type="button"
-          class="btn btn_likeSI pb-3 pe-5 btn btn-light-blue btn-md"><i class="bi bi-heart-fill"></i></button>
-        <button *ngIf="gestioneIcone(selectedSpiaggia.id)==false" (click)="aggiungiPreferiti(selectedSpiaggia.id)" type="button"
-          class="btn btn_likeNO pb-3 pe-5 btn-light-blue btn-md"><i class="bi bi-heart"></i></button>
+        <button *ngIf="gestioneIcone(selectedSpiaggia.id)==true" (click)="rimuoviPreferiti(selectedSpiaggia.id)"
+          type="button" class="btn btn_likeSI pb-3 pe-4 btn btn-light-blue btn-md"><i
+            class="bi bi-heart-fill"></i></button>
+        <button *ngIf="gestioneIcone(selectedSpiaggia.id)==false" (click)="aggiungiPreferiti(selectedSpiaggia.id)"
+          type="button" class="btn btn_likeNO pb-3 pe-4 btn-light-blue btn-md"><i class="bi bi-heart"></i></button>
       </div>
     </div>
   </div>

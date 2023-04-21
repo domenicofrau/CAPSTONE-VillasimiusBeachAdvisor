@@ -24,6 +24,11 @@ public class DatabaseInitializer {
         spiaggia1.setImageUrl("../../../../assets/img/spiagge/puntamolentis.jpg");
         spiaggia1.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.PONENTE));
         spiaggia1.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
+        
+        spiaggia1.setStabilimentoBalneare(true);
+        spiaggia1.setBar(true);
+        spiaggia1.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia1);
 
         Spiaggia spiaggia2 = new Spiaggia();
@@ -34,6 +39,11 @@ public class DatabaseInitializer {
         spiaggia2.setImageUrl("../../../../assets/img/spiagge/manunzas.jpg");
         spiaggia2.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.PONENTE, DirezioneVento.LIBECCIO));
         spiaggia2.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
+        
+        spiaggia2.setStabilimentoBalneare(true);
+        spiaggia2.setBar(true);
+        spiaggia2.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia2);
         
         Spiaggia spiaggia3 = new Spiaggia();
@@ -44,6 +54,11 @@ public class DatabaseInitializer {
         spiaggia3.setImageUrl("../../../../assets/img/spiagge/istraias.jpg");
         spiaggia3.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.PONENTE, DirezioneVento.LIBECCIO));
         spiaggia3.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.GRECALE));
+        
+        spiaggia3.setStabilimentoBalneare(true);
+        spiaggia3.setBar(true);
+        spiaggia3.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia3);
         
         Spiaggia spiaggia4 = new Spiaggia();
@@ -54,6 +69,11 @@ public class DatabaseInitializer {
         spiaggia4.setImageUrl("../../../../assets/img/spiagge/simius.jpg");
         spiaggia4.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.PONENTE));
         spiaggia4.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.SCIROCCO));
+        
+        spiaggia4.setStabilimentoBalneare(true);
+        spiaggia4.setBar(true);
+        spiaggia4.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia4);
         
         Spiaggia spiaggia5 = new Spiaggia();
@@ -64,6 +84,11 @@ public class DatabaseInitializer {
         spiaggia5.setImageUrl("../../../../assets/img/spiagge/portogiunco.jpg");
         spiaggia5.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.PONENTE));
         spiaggia5.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
+        
+        spiaggia5.setStabilimentoBalneare(true);
+        spiaggia5.setBar(true);
+        spiaggia5.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia5);
         
         Spiaggia spiaggia6 = new Spiaggia();
@@ -74,6 +99,11 @@ public class DatabaseInitializer {
         spiaggia6.setImageUrl("../../../../assets/img/spiagge/calagiunco.jpg");
         spiaggia6.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.LEVANTE));
         spiaggia6.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.PONENTE));
+        
+        spiaggia6.setStabilimentoBalneare(true);
+        spiaggia6.setBar(true);
+        spiaggia6.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia6);
         
         Spiaggia spiaggia7 = new Spiaggia();
@@ -84,16 +114,26 @@ public class DatabaseInitializer {
         spiaggia7.setImageUrl("../../../../assets/img/spiagge/cavausai.jpg");
         spiaggia7.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.LIBECCIO));
         spiaggia7.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
+        
+        spiaggia7.setStabilimentoBalneare(true);
+        spiaggia7.setBar(true);
+        spiaggia7.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia7);
         
         Spiaggia spiaggia8 = new Spiaggia();
         spiaggia8.setNome("Cala Burroni");
         spiaggia8.setLatitudine(39.098239);
         spiaggia8.setLongitudine(9.522281);
-        spiaggia8.setDescrizione("Cala Burroni - descrizione");
+        spiaggia8.setDescrizione("Cala Burroni, a Villasimius, è un'incantevole spiaggia sarda con sabbia dorata e acque cristalline. Circondata da scogliere e macchia mediterranea, offre un'atmosfera rilassante e panorami mozzafiato.");
         spiaggia8.setImageUrl("../../../../assets/img/spiagge/calaburroni.jpg");
         spiaggia8.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.PONENTE));
         spiaggia8.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.SCIROCCO));
+        
+        spiaggia8.setStabilimentoBalneare(true);
+        spiaggia8.setBar(true);
+        spiaggia8.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia8);
         
         Spiaggia spiaggia9 = new Spiaggia();
@@ -104,26 +144,42 @@ public class DatabaseInitializer {
         spiaggia9.setImageUrl("../../../../assets/img/spiagge/calacaterina.jpg");
         spiaggia9.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.LEVANTE));
         spiaggia9.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.PONENTE));
+        
+        spiaggia9.setStabilimentoBalneare(true);
+        spiaggia9.setBar(true);
+        spiaggia9.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia9);
         
         Spiaggia spiaggia10 = new Spiaggia();
         spiaggia10.setNome("Santo Stefano");
         spiaggia10.setLatitudine(39.110214);
         spiaggia10.setLongitudine(9.505135);
-        spiaggia10.setDescrizione("Santo Stefano - descrizione");
+        spiaggia10.setDescrizione("La spiaggia di Santo Stefano a Villasimius è un angolo di paradiso: acque cristalline, sabbia dorata e scogliere. Perfetta per snorkeling, relax e panorami mozzafiato.");
         spiaggia10.setImageUrl("../../../../assets/img/spiagge/santostefano.jpg");
         spiaggia10.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
         spiaggia10.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.PONENTE));
+        
+        spiaggia10.setStabilimentoBalneare(true);
+        spiaggia10.setBar(true);
+        spiaggia10.setIngressoCani(false);
+        
+        
         //spiaggiaService.createSpiaggia(spiaggia10);
         
         Spiaggia spiaggia11 = new Spiaggia();
         spiaggia11.setNome("Fortezza Vecchia");
         spiaggia11.setLatitudine(39.116094);
         spiaggia11.setLongitudine(9.505225);
-        spiaggia11.setDescrizione("Fortezza Vecchia - descrizione");
+        spiaggia11.setDescrizione("La Fortezza Vecchia di Villasimius è un'incantevole spiaggia sarda con acque cristalline, sabbia dorata e una vista mozzafiato sulla storica fortificazione. Un paradiso per relax e snorkeling.");
         spiaggia11.setImageUrl("../../../../assets/img/spiagge/fortezzavecchia.jpg");
         spiaggia11.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.SCIROCCO, DirezioneVento.LEVANTE));
         spiaggia11.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.TRAMONTANA));
+        
+        spiaggia11.setStabilimentoBalneare(true);
+        spiaggia11.setBar(true);
+        spiaggia11.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia11);
         
         Spiaggia spiaggia12 = new Spiaggia();
@@ -134,6 +190,11 @@ public class DatabaseInitializer {
         spiaggia12.setImageUrl("../../../../assets/img/spiagge/spiaggiadelriso.jpg");
         spiaggia12.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.LEVANTE));
         spiaggia12.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.PONENTE));
+        
+        spiaggia12.setStabilimentoBalneare(true);
+        spiaggia12.setBar(true);
+        spiaggia12.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia12);
         
         Spiaggia spiaggia13 = new Spiaggia();
@@ -144,6 +205,11 @@ public class DatabaseInitializer {
         spiaggia13.setImageUrl("../../../../assets/img/spiagge/campulongu.jpg");
         spiaggia13.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.SCIROCCO));
         spiaggia13.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.MAESTRALE, DirezioneVento.LIBECCIO));
+        
+        spiaggia13.setStabilimentoBalneare(true);
+        spiaggia13.setBar(true);
+        spiaggia13.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia13);
         
         Spiaggia spiaggia14 = new Spiaggia();
@@ -154,6 +220,11 @@ public class DatabaseInitializer {
         spiaggia14.setImageUrl("../../../../assets/img/spiagge/cuccureddus.jpg");
         spiaggia14.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.SCIROCCO));
         spiaggia14.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.PONENTE, DirezioneVento.LIBECCIO));
+        
+        spiaggia14.setStabilimentoBalneare(true);
+        spiaggia14.setBar(true);
+        spiaggia14.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia14);
         
         Spiaggia spiaggia15 = new Spiaggia();
@@ -164,6 +235,11 @@ public class DatabaseInitializer {
         spiaggia15.setImageUrl("../../../../assets/img/spiagge/campus.jpg");
         spiaggia15.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.TRAMONTANA));
         spiaggia15.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.OSTRO));
+        
+        spiaggia15.setStabilimentoBalneare(true);
+        spiaggia15.setBar(true);
+        spiaggia15.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia15);
         
         Spiaggia spiaggia16 = new Spiaggia();
@@ -174,6 +250,11 @@ public class DatabaseInitializer {
         spiaggia16.setImageUrl("../../../../assets/img/spiagge/piscadeddus.jpg");
         spiaggia16.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.TRAMONTANA));
         spiaggia16.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.LIBECCIO, DirezioneVento.OSTRO));
+        
+        spiaggia16.setStabilimentoBalneare(true);
+        spiaggia16.setBar(true);
+        spiaggia16.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia16);
         
         Spiaggia spiaggia17 = new Spiaggia();
@@ -184,6 +265,11 @@ public class DatabaseInitializer {
         spiaggia17.setImageUrl("../../../../assets/img/spiagge/portosaruxi.jpg");
         spiaggia17.setOttimaDirezioneVento(Arrays.asList(DirezioneVento.GRECALE, DirezioneVento.TRAMONTANA));
         spiaggia17.setPessimaDirezioneVento(Arrays.asList(DirezioneVento.OSTRO, DirezioneVento.LIBECCIO));
+        
+        spiaggia17.setStabilimentoBalneare(true);
+        spiaggia17.setBar(true);
+        spiaggia17.setIngressoCani(false);
+        
         //spiaggiaService.createSpiaggia(spiaggia17);
         
     }

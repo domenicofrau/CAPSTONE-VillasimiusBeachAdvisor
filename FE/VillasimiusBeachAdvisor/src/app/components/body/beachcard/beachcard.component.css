@@ -122,7 +122,7 @@
 
 .custom-card-img-plus {
   margin-top: 60px;
-  height: 400px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -144,21 +144,21 @@
     opacity: 1;
   }
 }
-.map-container {
-  position: relative;
-  width: 10%;
+.details {
+  color: black;
+  font-size: 13px;
 }
 
-#map {
-  width: 10%;
-  height: 10%;
-  box-shadow: 0px 10px 20px rgb(156, 156, 156);
+.details-bg {
+  background-color: rgb(236, 236, 236);
 }
 
-.small-map {
-  width: 100%;
-  height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 1rem;
+.text-green {
+  color: rgb(13, 190, 13);
+  text-transform: uppercase;
+}
+
+.text-red {
+  color: rgb(203, 37, 37);
+  text-transform: uppercase;
 }/*# sourceMappingURL=beachcard.component.css.map */

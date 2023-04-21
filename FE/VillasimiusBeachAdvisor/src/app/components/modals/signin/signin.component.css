@@ -95,4 +95,8 @@ input::-moz-placeholder {
 input::placeholder {
   color: rgba(42, 76, 110, 0.45);
   font-size: 12px;
+}
+
+#login_label {
+  cursor: default;
 }/*# sourceMappingURL=signin.component.css.map */

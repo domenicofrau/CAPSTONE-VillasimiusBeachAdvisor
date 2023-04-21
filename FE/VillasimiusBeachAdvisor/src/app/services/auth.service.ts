@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import jwt_decode, { JwtPayload } from 'jwt-decode';
 import { map } from 'rxjs/operators';
-import { PreferitiService } from './preferiti.service';
 
 export interface User {
   id: number;

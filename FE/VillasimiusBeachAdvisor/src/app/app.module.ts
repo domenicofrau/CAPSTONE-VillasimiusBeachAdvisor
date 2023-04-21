@@ -20,6 +20,7 @@ import { AuthService } from './services/auth.service';
 import { ProfileComponent } from './components/modals/profile/profile.component';
 import { FavouritesComponent } from './components/modals/favourites/favourites.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
+import { BeachMapComponent } from './components/body/beach-map/beach-map.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     SignupComponent,
     ProfileComponent,
     FavouritesComponent,
-    FooterComponent
+    FooterComponent,
+    BeachMapComponent
   ],
   imports: [
     BrowserModule,

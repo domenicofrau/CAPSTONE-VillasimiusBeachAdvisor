@@ -36,13 +36,22 @@ public class Spiaggia {
 
     @Column(nullable = false)
     private Double longitudine;
-    
+
     @Column(nullable = false)
     private String descrizione;
-    
+
     @Column
     private String condizione;
-    
+
     @Column
     private String imageUrl;
+
+    @Column(nullable = false)
+    private boolean stabilimentoBalneare;
+
+    @Column(nullable = false)
+    private boolean bar;
+
+    @Column(nullable = false)
+    private boolean ingressoCani;
 }
