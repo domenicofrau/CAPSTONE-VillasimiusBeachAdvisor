@@ -33,8 +33,35 @@ export class BeachMapComponent implements OnInit, AfterViewInit {
       disableDefaultUI: true,
       draggable: true,
       zoomControl: false,
-      scrollwheel: false,
-      disableDoubleClickZoom: true
+      scrollwheel: true,
+      disableDoubleClickZoom: true,
+      styles: [
+        {
+          featureType: 'all',
+          elementType: 'labels.icon',
+          stylers: [{ visibility: 'off' }]
+        },
+        {
+          featureType: 'poi.business',
+          elementType: 'all',
+          stylers: [{ visibility: 'off' }]
+        },
+        {
+          featureType: 'poi.medical',
+          elementType: 'all',
+          stylers: [{ visibility: 'off' }]
+        },
+        {
+          featureType: 'poi.school',
+          elementType: 'all',
+          stylers: [{ visibility: 'off' }]
+        },
+        {
+          featureType: 'poi.sports_complex',
+          elementType: 'all',
+          stylers: [{ visibility: 'off' }]
+        }
+      ]
     };
 
     this.map = new google.maps.Map(this.mapContainer.nativeElement, mapOptions);
@@ -42,6 +69,14 @@ export class BeachMapComponent implements OnInit, AfterViewInit {
     const marker = new google.maps.Marker({
       position: new google.maps.LatLng(this.lat, this.lng),
       map: this.map
+    });
+
+    // Remove the "Map data © Google" element from the map
+    google.maps.event.addListenerOnce(this.map, 'idle', () => {
+      const mapDataElement = this.mapContainer.nativeElement.querySelector('.gm-style > div > a');
+      if (mapDataElement) {
+        mapDataElement.style.display = 'none';
+      }
     });
   }
 }

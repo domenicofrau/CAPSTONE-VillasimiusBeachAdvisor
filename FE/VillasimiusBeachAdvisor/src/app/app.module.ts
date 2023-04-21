@@ -35,7 +35,7 @@ import { BeachMapComponent } from './components/body/beach-map/beach-map.compone
     ProfileComponent,
     FavouritesComponent,
     FooterComponent,
-    BeachMapComponent
+    BeachMapComponent,
   ],
   imports: [
     BrowserModule,

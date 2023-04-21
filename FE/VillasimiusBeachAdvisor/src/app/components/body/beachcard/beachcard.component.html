@@ -17,12 +17,10 @@
         </div>
         <div class="card-body">
           <h4 class="card-title">{{ spiaggia.nome }}</h4>
-          <p class="card-text text-justify mt-4 descrizione" *ngIf="screenWidth > 767">
+          <p class="card-text text-justify mt-4 descrizione" *ngIf="screenWidth > 300">
             {{ truncateDescription(spiaggia.descrizione, 100) }}
           </p>
-          <p class="card-text text-justify mt-4 descrizione" *ngIf="screenWidth <= 767">
-            {{ spiaggia.descrizione }}
-          </p>
+
           <div class="d-flex justify-content-end">
             <button (click)="onInfoClick(spiaggia)" type="button" class="info-icon btn btn-light-blue btn-md">
               <i class="bi bi-info-circle"></i>
@@ -41,7 +39,7 @@
 </div>
 
 <div *ngIf="selectedSpiaggia" class="modal-backdrop">
-  <div class="modal-card-content w-25">
+  <div class="modal-card-content">
     <div class="card">
       <p class="label-top-left-plus mt-1">{{ selectedSpiaggia.condizione }}</p>
       <i [ngClass]="{
@@ -63,11 +61,11 @@
         </p>
       </div>
 
-      <div class="card-map">
+      <div class="card-map mt-3">
         <app-beach-map [lat]="selectedSpiaggia.latitudine" [lng]="selectedSpiaggia.longitudine"></app-beach-map>
       </div>
 
-      <div class="details-bg mt-3 pt-2 pb-2">
+      <div class="details-bg  pt-2 pb-2">
         <p class="mb-1 ms-4 details">
           Presenza di stabilimento balneare:
           <strong [ngClass]="selectedSpiaggia.stabilimentoBalneare ? 'text-green' : 'text-red'">{{ selectedSpiaggia.stabilimentoBalneare ? 'Sì' : 'No' }}</strong>

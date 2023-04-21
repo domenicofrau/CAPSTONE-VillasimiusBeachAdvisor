@@ -12,7 +12,7 @@
     border-top-right-radius: 0px;
   }
   .card-text {
-    min-height: 120px;
+    min-height: 90px;
     color: $grigio-chiudi;
   }
 }
@@ -108,11 +108,11 @@
 .modal-card-content {
   overflow-y: hidden;
 }
-@media (max-width: 767px) {
-  .info-icon {
-    display: none;
-  }
-}
+// @media (max-width: 767px) {
+//   .info-icon {
+//     display: none;
+//   }
+// }
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -139,4 +139,16 @@
 .text-red {
   color: rgb(203, 37, 37);
   text-transform: uppercase;
+}
+
+.modal-card-content {
+  @media (min-width: 1200px) {
+    width: 25%;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 50%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
