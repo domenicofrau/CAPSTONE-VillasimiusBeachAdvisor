@@ -22,7 +22,7 @@ export class AuthService {
   private authStatusSource = new Subject<boolean>();
   public authStatus$ = this.authStatusSource.asObservable();
 
-  private apiUrl = 'http://localhost:8080/api/auth';
+  private apiUrl = 'https://villasimiusbeachadvisor.osc-fr1.scalingo.io/api/auth';
 
   constructor(private http: HttpClient) {
     const storedUser = localStorage.getItem('currentUser');

@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   user = sessionStorage.getItem('username');
   preferiti: any[] = [];
 
-  constructor(public authService: AuthService, private changeDetector: ChangeDetectorRef, private preferitiService: PreferitiService) {}
+  constructor(public authService: AuthService, private changeDetector: ChangeDetectorRef, private preferitiService: PreferitiService) { }
 
   ngOnInit(): void {
     this.isAuthenticated = this.authService.isAuthenticated();
@@ -25,9 +25,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.changeDetector.detectChanges();
       }
     );
-    this.preferitiService.preferitiChanged.subscribe(() => {
-      this.ottieniPreferiti();
-    });
+    if (this.isAuthenticated == false) {
+      this.preferitiService.preferitiChanged.subscribe(() => {
+        this.ottieniPreferiti();
+      });
+    }
   }
 
   ngOnDestroy(): void {
@@ -40,7 +42,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     window.location.reload();
   }
 
-  logout(){
+  logout() {
     this.authService.logout();
   }
 

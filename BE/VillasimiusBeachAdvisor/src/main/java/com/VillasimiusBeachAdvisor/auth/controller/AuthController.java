@@ -15,7 +15,7 @@ import com.VillasimiusBeachAdvisor.auth.payload.LoginDto;
 import com.VillasimiusBeachAdvisor.auth.payload.RegisterDto;
 import com.VillasimiusBeachAdvisor.auth.service.AuthService;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "https://villasimiusbeachadvisor.osc-fr1.scalingo.io")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -27,6 +27,7 @@ public class AuthController {
     }
 
     // Build Login REST API
+    @CrossOrigin(origins = "https://villasimiusbeachadvisor.osc-fr1.scalingo.io")
     @PostMapping(value = {"/login", "/signin"})
     public ResponseEntity<JWTAuthResponse> login(@RequestBody LoginDto loginDto){
         
@@ -42,12 +43,14 @@ public class AuthController {
     }
 
     // Build Register REST API
+    @CrossOrigin(origins = "https://villasimiusbeachadvisor.osc-fr1.scalingo.io")
     @PostMapping(value = {"/register", "/signup"})
     public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
         String response = authService.register(registerDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
     
+    @CrossOrigin(origins = "https://villasimiusbeachadvisor.osc-fr1.scalingo.io")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long id){
         authService.deleteUser(id);

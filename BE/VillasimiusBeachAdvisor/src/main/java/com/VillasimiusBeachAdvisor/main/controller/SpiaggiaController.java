@@ -19,7 +19,7 @@ import org.springframework.http.ResponseEntity;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
 @RestController
 @RequestMapping("/api/spiagge")
 public class SpiaggiaController {
@@ -27,11 +27,13 @@ public class SpiaggiaController {
     @Autowired
     private SpiaggiaService spiaggiaService;
 
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
     @GetMapping
     public List<Spiaggia> getAllSpiagge() {
         return spiaggiaService.getAllSpiagge();
     }
     
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
     @GetMapping("/{id}/image")
     public ResponseEntity<Resource> getImagenSpiaggia(@PathVariable Long id) {
         Spiaggia spiaggia = spiaggiaService.getSpiaggiaById(id);

@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
 })
 export class PreferitiService {
 
-  private apiUrl = 'http://localhost:8080/api/preferiti/';
+  private apiUrl = 'https://villasimiusbeachadvisor.osc-fr1.scalingo.io/api/preferiti/';
   preferitiChanged = new Subject<void>();
 
   constructor(private http: HttpClient, private as: AuthService) { }

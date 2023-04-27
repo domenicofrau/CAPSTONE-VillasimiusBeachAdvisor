@@ -12,7 +12,7 @@ export class SpiaggeService {
   async getSpiagge(): Promise<Spiaggia[]> {
     try {
       const spiaggeResponse: Spiaggia[] | undefined = await this.httpClient
-        .get<Spiaggia[]>('http://localhost:8080/api/spiagge')
+        .get<Spiaggia[]>('https://villasimiusbeachadvisor.osc-fr1.scalingo.io/api/spiagge')
         .toPromise();
 
       if (!Array.isArray(spiaggeResponse)) {

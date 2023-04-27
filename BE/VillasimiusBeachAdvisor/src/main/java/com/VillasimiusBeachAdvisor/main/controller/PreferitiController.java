@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.VillasimiusBeachAdvisor.auth.service.AuthService;
 import com.VillasimiusBeachAdvisor.main.entity.Spiaggia;
 import com.VillasimiusBeachAdvisor.main.repository.SpiaggiaRepository;
 
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
 @RestController
 @RequestMapping("/api")
 public class PreferitiController {
@@ -33,6 +35,7 @@ public class PreferitiController {
 	@Autowired
 	SpiaggiaRepository spiaggiaRepo;
 
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
 	@PostMapping("/preferiti/{id}")
 	public ResponseEntity<User> aggiungiPreferito(@PathVariable Long id,
 			@RequestHeader(name = "Authorization", required = false) String jwt) {
@@ -57,6 +60,7 @@ public class PreferitiController {
 
 	}
 
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
 	@DeleteMapping("/preferiti/{id}")
 	public ResponseEntity<User> rimuoviPreferito(@PathVariable Long id,
 			@RequestHeader(name = "Authorization", required = false) String jwt) {
@@ -78,6 +82,7 @@ public class PreferitiController {
 
 	}
 
+@CrossOrigin(origins = {"https://www.villasimiusbeachadvisor.com", "https://villasimiusbeachadvisor.com"})
 	@GetMapping("/preferiti/all")
 	public ResponseEntity<List<Spiaggia>> tuttiPreferiti(
 			@RequestHeader(name = "Authorization", required = false) String jwt) {
